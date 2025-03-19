@@ -21,6 +21,7 @@ export const CourseProvider = ({ children }) => {
         formData.append("image", courseImage);
         const res = await axios.post('https://courses-backend-umber.vercel.app/api/add-course', formData ,{
             headers: { "Content-Type": "multipart/form-data" },
+            withCredentials: true,
     });
         if (res.data.status) {
             success(res.data.message)
