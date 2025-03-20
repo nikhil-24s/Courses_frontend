@@ -69,9 +69,9 @@ export const CourseProvider = ({ children }) => {
         }
     }
 
-    // useEffect(() => {
-    //     getAllCourses()
-    // }, [addCourse])
+    useEffect(() => {
+        getAllCourses()
+    }, [addCourse])
     useEffect(() => {
         getAllCourses()
     }, [])
