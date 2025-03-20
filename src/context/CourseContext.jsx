@@ -25,6 +25,7 @@ export const CourseProvider = ({ children }) => {
     }); 
         if (res.data.status) {
             success(res.data.message)
+            getAllCourses();
             navigate('/courses')
         } else {
             error(res.data.message)
@@ -69,9 +70,9 @@ export const CourseProvider = ({ children }) => {
         }
     }
 
-    useEffect(() => {
-        getAllCourses()
-    }, [addCourse])
+    // useEffect(() => {
+    //     getAllCourses()
+    // }, [addCourse])
     useEffect(() => {
         getAllCourses()
     }, [])
