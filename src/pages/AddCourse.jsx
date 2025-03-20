@@ -40,7 +40,7 @@ const AddCourse = () => {
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700">Course Image</label>
-                            <input type="file" onChange={handleImageChange} className="w-full p-2 border rounded" accept="image/*" required />
+                            <input type="file" onChange={handleImageChange} className="w-full p-2 border rounded" accept="image/*"  />
                         </div>
                         <input type='submit' className="w-full bg-purple-600 text-white cursor-pointer p-2 rounded" value='Add Course' />
                     </form>
