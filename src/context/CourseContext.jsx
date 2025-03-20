@@ -22,12 +22,13 @@ export const CourseProvider = ({ children }) => {
         const res = await axios.post('https://courses-backend-umber.vercel.app/api/add-course', formData ,{
             headers: { "Content-Type": "multipart/form-data" },
             withCredentials: true,
-    });
+    }); 
         if (res.data.status) {
             success(res.data.message)
             navigate('/courses')
         } else {
             error(res.data.message)
+            toast.error("Failed to add course.");
         }
     }
     const getAllCourses = async () => {
@@ -68,9 +69,9 @@ export const CourseProvider = ({ children }) => {
         }
     }
 
-    useEffect(() => {
-        getAllCourses()
-    }, [addCourse])
+    // useEffect(() => {
+    //     getAllCourses()
+    // }, [addCourse])
     useEffect(() => {
         getAllCourses()
     }, [])
